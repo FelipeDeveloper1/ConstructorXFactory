@@ -1,6 +1,6 @@
 function carro(velatual = 0, vmax = 150) {
     this.acelerar = (delta = 20) => {
-        if (velatual += delta < vmax) {
+        if (velatual + delta < vmax) {
             velatual += delta
         } else {
             velatual = vmax
@@ -11,6 +11,6 @@ function carro(velatual = 0, vmax = 150) {
     }
 }
 const ferrari = new carro(0, 200)
+ferrari.acelerar(70)
 ferrari.acelerar(50)
-ferrari.acelerar(10)
 console.log(ferrari.show())
